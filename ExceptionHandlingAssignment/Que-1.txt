@@ -1,0 +1,29 @@
+package com.exception.handling.assign;
+
+import java.util.Scanner;
+
+public class DivideApp {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		DivideOperation d=new DivideOperation();
+		System.out.println("Enter 1st no: ");
+		int no1=sc.nextInt();
+		System.out.println("Enter 1st no: ");
+		int no2=sc.nextInt();
+		
+		d.divide(no1,no2);
+	}
+
+}
+class DivideOperation{
+	void divide(int no1,int no2)  {
+		try {
+		int result=no1/no2;
+		System.out.println("Result: "+result);
+		}
+		
+		catch(ArithmeticException e) {
+			e.printStackTrace();
+		}
+	}
+}
